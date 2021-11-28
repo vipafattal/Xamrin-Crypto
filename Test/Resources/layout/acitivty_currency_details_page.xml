@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/details_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/toolbar_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    style="@style/AppTheme.Text.Secondary1"
+                    tools:text="BitCoin Price (BTC)"
+                    android:id="@+id/details_currency_name_text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    style="@style/AppTheme.Text.HeadLine1"
+                    android:textStyle="bold"
+                    tools:text="$54,603.50"
+                    android:id="@+id/details_currency_price_text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="6dp"/>
+                <include
+                    layout="@layout/layout_details_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"/>
+                <TextView
+                    android:textStyle="bold"
+                    style="@style/AppTheme.Text.Body1"
+                    android:id="@+id/converter_title_text"
+                    tools:text="BTC to USD Converter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"/>
+                <include
+                    layout="@layout/layout_converter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"/>
+                <TextView
+                    android:textStyle="bold"
+                    style="@style/AppTheme.Text.Body1"
+                    android:text="Description"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
+                <TextView
+                    android:id="@+id/details_description_text"
+                    style="@style/AppTheme.Text.Body3"
+                    android:textColor="@color/colorTextSecondary"
+                    android:text="Description"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/details_loading_progress"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:paddingVertical="8dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        android:layout_width="42dp"
+        android:layout_height="28dp"
+        app:cardBackgroundColor="@color/colorItemSecondary"
+         >
+
+        <TextView
+            style="@style/AppTheme.Text.Secondary1"
+            
+            android:id="@+id/item_rank_text"
+            tools:text="#1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_marginHorizontal="12dp"
+        android:id="@+id/item_coin_image"
+        tools:src="@tools:sample/avatars"
+        android:layout_width="32dp"
+        android:layout_height="32dp"/>
+
+    <LinearLayout
+
+android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+     <TextView
+           
+            style="@style/AppTheme.Text.Body1"
+             android:id="@+id/item_coin_name_text"
+            tools:text="Bitcoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+         <TextView
+            style="@style/AppTheme.Text.Secondary1"
+            android:id="@+id/item_coin_symbol_text"
+            tools:text="BTC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Space
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+     <TextView
+           
+            style="@style/AppTheme.Text.Body1"
+             android:id="@+id/item_coin_price_text"
+            tools:text="$54,793.06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</LinearLayout>
